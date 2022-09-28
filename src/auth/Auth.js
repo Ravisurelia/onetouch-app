@@ -1,12 +1,18 @@
 import React from "react";
-import { Image } from "react-bootstrap/Image";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import './auth.css'
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import "./auth.css";
 
 const Auth = () => (
-    <div className="Auth-form-container">
-      <Form className="Auth-form">
+  <div className="Auth-form-container">
+    <div className="text-center">
+      <img
+        src="../logo192.png"
+        className="rounded mx-auto d-block img-thumbnail logo"
+        alt="onetouch logo"
+      />
+    </div>
+    <Form className="Auth-form">
       <Form.Group className="mb-3 Auth-form-content" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -15,20 +21,26 @@ const Auth = () => (
         </Form.Text>
       </Form.Group>
 
-      <Form.Group className="mb-3 Auth-form-content" controlId="formBasicPassword">
+      <Form.Group
+        className="mb-3 Auth-form-content"
+        controlId="formBasicPassword"
+      >
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3 Auth-form-content" controlId="formBasicCheckbox">
+      <Form.Group
+        className="mb-3 Auth-form-content"
+        controlId="formBasicCheckbox"
+      >
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <div className="d-grid gap-2 mt-3 Auth-form-content">
         <Button variant="primary" type="submit">
-            Submit
+          Submit
         </Button>
       </div>
     </Form>
-</div>
-)
+  </div>
+);
 
 export default Auth;
